@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact-ist</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.49.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+  </head>
+  <body>
+    <div class="m-8">
+      <header>
+        <div class="navbar-center bg-base-100 drop-shadow-md p-2 rounded-bl-lg">
+          <a class="btn btn-ghost normal-case text-2xl">Contact-ist</a>
+        </div>
+      </header>
+      <main class="flex flex-col md:flex-row">
+        <!-- Contact from here  -->
+        <div id="left" class="m-8">
+          <form id="form">
+            <div>
+              <label for="name" class="font-medium m-1">Person's name</label>
+              <br />
+              <input
+                class="input input-bordered m-1 w-full accent-content"
+                placeholder="First"
+                type="text"
+                id="fname"
+                name="fname"
+              />
+              <input
+                class="input input-bordered m-1 w-full accent-content"
+                placeholder="Last"
+                type="text"
+                id="lname"
+                name="lname"
+              />
+              <br />
+              <br />
+              <label for="number" class="font-medium m-1">Contact Number</label>
+              <br />
+              <input
+                class="input input-bordered w-full max-w-xs m-1"
+                type="number"
+                id="contact"
+                name="number"
+              />
+              <br />
+              <div id="msg"></div>
+              <br />
+              <button
+                class="btn btn-outline m-1 w-full"
+                type="submit"
+              >
+                SAVE
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Contact list here  -->
+        <div id="right" class="m-8 flex-1">
+          <input
+            class="input input-bordered m-1 w-full"
+            placeholder="Search"
+            type="search"
+            name="search"
+            id="myInput"
+            onkeyup="myFunction()"
+          />
+          <br /><br />
+          <!-- table list here  -->
+          <div class="overflow-auto">
+          <table id="myTable" class="table table-auto sortable">
+            <thead>
+              <tr>
+                <th class="w-64">Name</th>
+                <th class="w-64">Contact</th>
+                <th class="w-64">Option</th>
+              </tr>
+            </thead>
+            <tbody class="overflow-y-auto" id="lists">
+              <!-- <tr>
+                <td>Roshan Singh</td>
+                <td>7897802647</td>
+                <td><i class="fas fa-trash-alt"></i></td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
